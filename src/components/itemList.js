@@ -48,8 +48,8 @@ function useItemWaveRunner(itemRefs) {
       targets: itemRefs.current,
       keyframes: [
         {
-          opacity: 0.6,
-          scale: 0.95,
+          opacity: anime.stagger([0.6, 1], { from: startIdx }),
+          scale: anime.stagger([0.95, 1], { from: startIdx }),
           duration: 500,
         },
         {
