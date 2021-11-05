@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { ItemListSection } from "./components/itemList";
+import { ItemTabSection } from "./components/itermTab";
 import { ProgressMasterSection } from "./components/progressBarMaster";
 import { ProgressSection } from "./components/progressBarPlain";
 import { ProgressStyledSection } from "./components/progressBarStyled";
@@ -10,6 +11,7 @@ function App() {
       <ProgressSection />
       <ProgressStyledSection />
       <ProgressMasterSection />
+      <ItemTabSection />
       <ItemListSection />
     </Container>
   );

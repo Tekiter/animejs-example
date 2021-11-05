@@ -49,7 +49,7 @@ function useProgressAnimation(ref, progress) {
     if (isInit.current) {
       anime({
         targets: ref.current,
-        width: `0%`,
+        width: `${progress}%`,
         duration: 0,
       });
       isInit.current = false;
