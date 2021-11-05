@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+import { ItemListSection } from "./components/itemList";
+import { ProgressMasterSection } from "./components/progressBarMaster";
+import { ProgressSection } from "./components/progressBarPlain";
+import { ProgressStyledSection } from "./components/progressBarStyled";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <ProgressSection />
+      <ProgressStyledSection />
+      <ProgressMasterSection />
+      <ItemListSection />
+    </Container>
   );
 }
+
+const Container = styled.div`
+  width: 50em;
+  margin: 0 auto;
+
+  & > * {
+    margin-top: 2em;
+  }
+`;
 
 export default App;
